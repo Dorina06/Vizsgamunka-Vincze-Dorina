@@ -1,0 +1,191 @@
+/* Menü szerkesztése */
+
+.felsosav {
+    display: flex;
+    height: 10vh;
+    background-color: #E8C7C8;
+    }
+
+#menu {
+    display: flex;
+    align-self: center;
+    margin-right: 20px;
+    gap: 3vh;
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*Hivatkozások szerkesztése*/
+
+a {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: black;
+    background-color: #D9A3A4;
+    border: 1px solid #D9A3A4;
+    border-radius: 15px;
+    padding: 8px;
+    transition: width 2s, height 2s, background-color 4s, color 4s ease, transform 3s;
+}
+
+/*leírás szerkesztése*/
+
+.leiras {
+    display: flex;
+    justify-content: center;
+}
+
+#bemutatkozas {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7vh;
+    justify-content: center;
+}
+
+.card {
+    
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/*Hoverek szerkesztése*/
+
+a:hover  {
+    background-color: white;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    
+    }
+
+div a:hover {
+    background-color: #D9A3A4;
+    transform: scale(1.1, 1.1);
+}
+
+.image-gallery img:hover {
+        transform: scale(1.1, 1.1);
+        transition-duration: 5s;
+    }
+
+
+/*Galéria szerkesztése*/
+
+h1 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7vh;
+    justify-content: center;
+}
+
+.image-gallery li {
+    list-style-type: none;
+}
+
+.image-gallery li img {
+    height: 250px;
+    width: 320px;
+    border-radius: 15px;
+}
+
+/*Form szerkesztése*/
+#foglalas {
+    height: 10vh;
+    background-color: #E8C7C8;
+    align-content: center;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border: 1px solid #D9A3A4;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+select {
+    border: 1px solid #D9A3A4;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+input[type=submit] {
+    background-color: #D9A3A4;
+    margin-left: 80px;
+    width: 100px;
+    font-weight: bold;
+}
+
+/*Footer szerkesztése*/
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #E8C7C8;
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/*Hamburger kép szerkesztése*/
+
+#hamburger {
+        display: none;
+
+    }
+
+
+@media only screen and (max-width: 992px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    a {
+        border: none;
+        background-color: #E8C7C8;
+    }
+
+    a:hover {
+        background-color: #D9A3A4;
+        display: block;
+    }
+
+   #hamburger {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .felsosav {
+        display: none;
+        height: 250px;
+    }
+
+
+}
+
+

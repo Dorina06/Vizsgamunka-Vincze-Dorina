@@ -1,63 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github gyakorlás</title>
-<style>
-    body {
-        background-color: grey;
-    }
-
-    header {
-        background-color: black;
-        color: white;
-    }
-</style>
+    <title>NailArtByDalma</title>
+    <link rel="stylesheet" href="nailartbydalma.css">
 </head>
 <body>
-    <h1>Weboldal publikálása Githubon</h1>
 
-    <header>Fejléc</header>
-
-    <table>
-        <caption>Táblázat</caption>
-        <tr>
-            <th>1.oszlop</th>
-            <th>2.oszlop</th>
-        </tr>
-        <tr>
-            <td>1.sor 1.</td>
-            <td>1.sor 2.</td>
-        </tr>
-
-    </table>
-
-    <main>
-        <section>Szakasz1</section>
-<div>
-    <p>Fotó</p>
-    <img src="./img/ai-generated-8549190_1280.jpg" alt="foto" width="100px">
-</div>
-
-        <section>Szakasz2</section>
-
-        <div>
-            <h2>Beszerzésre vár</h2>
-            <ul>
-                <li>polip</li>
-                <li>mangalica</li>
-                <li>tejfölös lángos</li>
-                <li>hupikék törpikék</li>
-                <li>fogkefe</li>
-            </ul>
+  <div class="container">
+    <div class="felsosav">
+      <div id="logo"><img src="./img/Dalma logó szerk..png" alt="logo" height="60px"></div>
+      <div id="menu">
+          <div><a href="index.html">Kezdőlap</a></div>
+          <div><a href="szolgaltatasok.html">Szolgáltatások / Árak</a></div>
+          <div><a href="galeria.html">Galéria</a></div>
+          <div><a href="#foglalas" class="hivatkozas">Kérj időpontot!</a></div>
+          <div><a href="#kapcsolat" class="hivatkozas">Kapcsolat</a></div>
+      </div>
+  </div>
+  </div> 
+  
+  <div id="hamburger" >
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <img src="./img/Hamburger_icon.svg.png" alt="hamburgermenu" id="ikon" width="30px">
+    <i class="vonalak"></i>
+    </a>
+  </div> 
+  
+  
+   
+  
+          <div class="leiras"><h1>Bemutatkozás</h1></div>
+          <div id="bemutatkozas" >
+              <p>Vincze Dalma vagyok, köszöntelek az oldalamon!</p>
+          </div>
+      
+  
+      <div class="cards">
+          <div class="card" style="width: 18rem;">
+              <img src="./img/japan-manikur-ingyen.jpg" class="card-img-top" alt="japanmanikur" style="width: 18rem;" height="200px">
+              <div class="card-body">
+                <h3 class="card-title">Manikűr</h3>
+                <p class="card-text">A manikűr jelenti a körmök formázását, a körömbőr eltávolítást, a kéz és az alkar bőrének teljes ápolását.</p><br>
+                <a href="szolgaltatasok.html" class="btn btn-primary">Részletek</a>
+              </div>
+            </div>
+  
+            <div class="card" style="width: 18rem;">
+              <img src="./img/pirosköröm.jpg" class="card-img-top" alt="pirosmukorom" style="width: 18rem;" height="200px">
+              <div class="card-body">
+                <h3 class="card-title">Műköröm</h3>
+                <p class="card-text">Ha természetes hatású és nagyon könnyen megszokható műkörmöt szeretnél, mely esztétikailag szép látványt nyújt.... </p><br>
+                <a href="szolgaltatasok.html" class="btn btn-primary">Részletek</a>
+              </div>
+            </div>
+      
+  
+      <div class="card" style="width: 18rem;">
+          <img src="./img/1fb1668ccb0ec2944f46a6a5fb53baa4.jpg" class="card-img-top" alt="naturmukorom" style="width: 18rem;" height="200px">
+          <div class="card-body">
+            <h3 class="card-title">Zselés töltés</h3>
+            <p class="card-text">4-6 hét után a műkörmök is növekednek, és rendszeres töltésre van szükségük, hogy mindig ápolt és szépek maradjanak. </p><br>
+            <a href="szolgaltatasok.html" class="btn btn-primary">Részletek</a>
+          </div>
         </div>
+      </div>
+  
+  
+          <div><h1>Galéria</h1></div>
+      <div class="flex-container" >
+          <ul class="image-gallery" >
+              <li id="foto1" ><img src="./img/korom1.jpg" alt="géllakk"></li>
+              <li id="foto2" ><img src="./img/korom3.jpg" alt="géllakk2"></li>
+              <li id="foto3" ><img src="./img/korom4.jpg" alt="géllakk3"></li>
+          </ul>
+          
+      </div>
+  
+      <div id="foglalas" >Kérj időpontot online!</div>
+  
+      <div class="form">
+          <div id="urlap" >
+  
+              
+              <label for="lastname" class="main">Vezetéknév<sup>*</sup></label><br>
+              <input type="text" name="lastname" id="lastname" placeholder="írd ide a vezetékneved">
+          </div>
+      
+          <div>
+              <label for="firstname" class="main">Keresztnév <sup>*</sup></label><br>
+              <input type="text" name="firstname" id="firstname" placeholder="írd ide a keresztneved">
+      
+          </div>
+          
+      
+          <div>
+              <label for="email" class="main">Email cím<sup>*</sup></label><br>
+              <input type="email" name="email" id="email" placeholder="írd ide az email címed">
+          
+          </div>
+  
+          <div>
+            <label for="datum">Időpont választás</label><br>
+            <input type="date" name="datum" id="datum">
+            <input type="time" name="datum" id="ido">
+            
+        </div>
+             <form action="/action_page.php">
+                <label for="szolg">Milyen szolgáltatást szeretnél?</label><br>
+                <select id="szolg" name="szolg">
+                  <option value="szolg1">Manikűr</option>
+                  <option value="szolg2">Géllakk</option>
+                  <option value="szolg3">Zselés építés</option>
+                  <option value="szolg4">Zselés töltés</option>
+                </select>
+                <input type="submit">
+              </form>
+             
+      </div>
+  </div>
+  
+  <footer>
+    <h2>Kapcsolat</h2>
+    <p id="kapcsolat">
+      Üzlet neve: NailArtByDalma <br>
+      Cím: Ausztria, Bsuch <br>
+      Telefonszám: +36 ** *** ****
+    </p>
+  </footer>
 
-    </main>
+    <script>
+        function myFunction() {
+          let x = document.getElementsByClassName("felsosav");
+          if (x[0].style.display === "flex") {
+            x[0].style.display = "none";
+          } else {
+            x[0].style.display = "flex";
+          }
+        }
+    </script>
 
-    <footer>Lábléc</footer>
 
-    <h3>Viráglexikon</h3>
 
 </body>
 </html>

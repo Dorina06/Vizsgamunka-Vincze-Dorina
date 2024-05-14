@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szolgáltatások / Árak</title>
+    <style>
+
+/* Menü szerkesztése */
+
+.felsosav {
+    display: flex;
+    height: 10vh;
+    background-color: #E8C7C8;
+    }
+
+#menu {
+    display: flex;
+    align-self: center;
+    margin-right: 20px;
+    gap: 3vh;
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*Hivatkozások szerkesztése*/
+
+a {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: black;
+    background-color: #D9A3A4;
+    border: 1px solid #D9A3A4;
+    border-radius: 15px;
+    padding: 8px;
+    transition: width 2s, height 2s, background-color 4s, color 4s ease, transform 3s;
+}
+
+/*Hoverek szerkesztése*/
+
+a:hover  {
+    background-color: white;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    
+    }
+
+div a:hover {
+    background-color: #D9A3A4;
+    transform: scale(1.1, 1.1);
+}
+
+/*Footer szerkesztése*/
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #E8C7C8;
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/*Hamburger kép szerkesztése*/
+
+#hamburger {
+        display: none;
+
+    }
+
+
+@media only screen and (max-width: 992px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    a {
+        border: none;
+        background-color: #E8C7C8;
+    }
+
+    a:hover {
+        background-color: #D9A3A4;
+        display: block;
+    }
+
+   #hamburger {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .felsosav {
+        display: none;
+        height: 250px;
+    }
+
+    .container {
+        display: flex;    
+        flex-wrap: wrap;
+        }
+
+    .szolgaltatas-box {
+            display: flex;
+    }
+
+
+}
+
+/*
+
+        .container {
+            width: 90%;
+            margin-right: 80px;
+            flex-wrap: wrap;
+        }
+*/
+
+.szolgaltatas-box {
+    display: flex;
+    width: 450px;
+    flex-direction: column;
+    margin: 50px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.szolgaltatas-box li {
+    list-style: inside;
+}
+
+h2, h3 {
+    box-sizing: border-box;
+    background-color: #D9A3A4;
+}
+
+.container {
+    display: flex;
+}
+
+.lepesek {
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="felsosav">
+        <div id="logo"><img src="./img/Dalma logó szerk..png" alt="logo" height="60px"></div>
+        <div id="menu">
+            <div><a href="index.html">Kezdőlap</a></div>
+            <div><a href="szolgaltatasok.html">Szolgáltatások / Árak</a></div>
+            <div><a href="galeria.html">Galéria</a></div>
+            <div><a href="#foglalas" class="hivatkozas">Kérj időpontot!</a></div>
+            <div><a href="#kapcsolat" class="hivatkozas">Kapcsolat</a></div>
+        </div>
+    </div>
+    </div> 
+    
+    <div id="hamburger" >
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <img src="./img/Hamburger_icon.svg.png" alt="hamburgermenu" id="ikon" width="30px">
+      <i class="vonalak"></i>
+      </a>
+    </div> 
+    
+        <div class="container">
+            <div class="szolgaltatas-box">
+                <h2>Manikűr</h2>
+                <p>A manikűr jelenti a körmök formázását, a körömbőr eltávolítást, a kéz és az alkar bőrének teljes ápolását.</p><br>
+        
+                <h3>Japán manikűr | 3000 Ft</h3> <br>
+                A manikűr után a körömlemezbe méhviaszt juttatunk, ezáltal sokkal erősebb és fényesebb lesz a köröm
+                felülete. A méhviasztól erősödik a köröm, élénkül a színe, mivel a viasz lényegében feltölti a köröm anyagát.
+                <p class="lepesek">Lépései:</p>
+                <ul>
+                    <li>Kézáztatás, bőrfeltolás, majd a cuticula eltávolítása</li>
+                    <li>Köröm felületének előkészítése a méhviaszos ápoláshoz</li>
+                    <li>A méhviasz körömlemezbe juttatása</li>
+                    <li>Körömlemez lezárása púderral (talkum porral)</li>
+                    <li>Bőrtápláló krémmel történő hidratálás</li>
+                </ul>
+                <p>Mivel ez a szolgáltatás erősíti a körmöt a méhviasz segítségével és 7-14 napig a fényes hatását megőrzi, ezzel
+                    egy igényes megjelenést biztosítva a viselőjének, így nemcsak nőknek, de férfiaknak is ajánlott.
+                    Japán manikűr után gél lakkozás, vagy műköröm építés sem ajánlott, mivel nem lesz tartós.</p>
+            </div>
+                
+            <div class="szolgaltatas-box">
+                <h2>Műköröm</h2>
+                <p>Ha természetes hatású és nagyon könnyen megszokható műkörmöt szeretnél, mely esztétikailag szép látványt nyújt....</p>
+                
+                <h3>Géllakk (kézre vagy lábra) | 5000 Ft</h3>
+                
+                <p>A saját körömre géllakkot köttetünk, majd fényzselével zárjuk. A szolgáltatás 2-3 hétig tartós, ezáltal igényes
+                    megjelenést biztosít a körmöknek.</p>
+        
+                <p class="lepesek">Lépései:</p>
+                <ul>
+                    <li>A saját köröm formára reszelése</li>
+                    <li>Bőrfeltolás, cuticula eltávolítása</li>
+                    <li>Előkészítő folyadékok alkalmazása</li>
+                    <li>Base gel felhordása a megfelelő tapadás elérése érdekében</li>
+                    <li>Választott szín (géllakk) felkenése</li>
+                    <li>Fény- vagy mattzselével történő lezárás</li>
+                    <li>1 köröm/kéz díszítése</li>
+                </ul>
+        
+                <h3>Géllakk zselés erősítéssel | 6000 Ft</h3>
+                <p>A saját körömre géllakkot köttetünk, majd fényzselével zárjuk. A szolgáltatás 2-3 hétig tartós, ezáltal igényes
+                    megjelenést biztosít a körmöknek.</p>
+            <p class="lepesek">Lépései:</p>
+            <ul>
+                <li>A saját köröm formára reszelése</li>
+                <li>Bőrfeltolás, cuticula eltávolítása</li>
+                <li>Előkészítő folyadékok alkalmazása</li>
+                <li>Építőzselé felhordása a megfelelő tapadás és erősség elérése érdekében</li>
+                <li>Választott szín (géllakk) felkenése</li>
+                <li>Fény- vagy mattzselével történő lezárás</li>
+                <li>1 köröm/kéz díszítése</li>
+            </ul>
+                
+                <h3>Saját köröm erősítése zselével | 6000 Ft</h3>
+                <p>A természetes körmöt zselével erősítjük a még jobb tartósság érdekében. 3-4 hétig tartós.</p>
+                <p class="lepesek">Lépései:</p>
+                <ul>
+                    <li>A saját köröm formára reszelése</li>
+                    <li>Bőrfeltolás, cuticula eltávolítása</li>
+                    <li>Előkészítő folyadékok alkalmazása</li>
+                    <li>Építőzselé felhordása a megfelelő tapadás elérésének érdekében</li>
+                    <li>Választott szín (zelé) felkenése</li>
+                    <li>Fény- vagy mattzselével történő lezárás</li>
+                    <li>1 köröm/kéz díszítése</li>
+                </ul>    
+        
+                <h3>Zselés építés (S/M méret) | 7000 Ft</h3>
+                <p>A saját körömhosszt megnyújtjuk, ezzel hosszabb és látványosabb körmöket létrehozva. 5-6 hétig tartós
+                    szolgáltatás.</p>
+                <p class="lepesek">Lépései:</p>
+                <ul>
+                    <li>A saját köröm reszelése</li>
+                    <li>Bőrfeltolás, cuticula eltávolítása</li>
+                    <li>Előkészítő folyadékok alkalmazása</li>
+                    <li>Építősablon felhelyezése/future tip méretének kiválasztása</li>
+                    <li>Építőzselé/future gel alkalmazása a kívánt hossz elérésének érdekében</li>
+                    <li>Választott szín felkenése</li>
+                    <li>Fény- vagy mattzselével történő lezárás</li>
+                    <li>1 köröm/kéz díszítése</li>
+                </ul>             
+            </div>
+                
+            <div class="szolgaltatas-box">
+                <h2>Zselés töltés</h2>
+                <p>4-6 hét után a műkörmök is növekednek, és rendszeres töltésre van szükségük, hogy mindig ápolt és szépek maradjanak.</p>
+                
+                <h3>Töltés (S/M méret) | 6000 Ft</h3>
+             <p>Az 5-6 hetes épített körmöt a saját körömmel összereszeljük és újra zselés építést végzünk a már előzőleg
+                meghosszabbított körömfelszínen. 5-6 hétig tartós szolgáltatás.</p>
+                
+                <p class="lepesek">Lépései:</p>
+                <ul>
+                    <li>A zselé saját körömmel történő összereszelése</li>
+                    <li>Bőrfeltolás, cuticula eltávolítása</li>
+                    <li>Előkészítő folyadékok alkalmazása</li>
+                    <li>Építőzselé felhordása a megfelelő tapadás elérésének érdekében</li>
+                    <li>Választott szín felkenése</li>
+                    <li>Fény- vagy mattzselével történő lezárás</li>
+                    <li>1 köröm/kéz díszítése</li>
+                </ul>
+            </div>
+ 
+        </div>
+       
+        <script>
+            function myFunction() {
+              let x = document.getElementsByClassName("felsosav");
+              if (x[0].style.display === "flex") {
+                x[0].style.display = "none";
+              } else {
+                x[0].style.display = "flex";
+              }
+            }
+        </script>
+    
+
+<footer>
+    <h1>Kapcsolat</h1>
+    <p id="kapcsolat">
+      Üzlet neve: NailArtByDalma <br>
+      Cím: Ausztria, Bsuch <br>
+      Telefonszám: +36 ** *** ****
+    </p>
+  </footer>
+
+</body>
+</html>

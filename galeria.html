@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galéria</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 200px;
+        }
+
+        img {
+            height: 80%;
+            border-radius: 15px;
+        }
+
+        .sajatfotok img:hover {
+            transform: scale(1.1, 1.1);
+            transition-duration: 5s;
+        }
+
+        body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* Menü szerkesztése */
+
+.felsosav {
+    display: flex;
+    height: 10vh;
+    background-color: #E8C7C8;
+    }
+
+#menu {
+    display: flex;
+    align-self: center;
+    margin-right: 20px;
+    gap: 3vh;
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*Hivatkozások szerkesztése*/
+
+a {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: black;
+    background-color: #D9A3A4;
+    border: 1px solid #D9A3A4;
+    border-radius: 15px;
+    padding: 8px;
+    transition: width 2s, height 2s, background-color 4s, color 4s ease, transform 3s;
+}
+
+#zuruck div {
+    display: flex;
+    align-items: center;
+}
+
+/*Hoverek szerkesztése*/
+
+a:hover  {
+    background-color: white;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    
+    }
+
+div a:hover {
+    background-color: #D9A3A4;
+    transform: scale(1.1, 1.1);
+}
+
+/*Footer szerkesztése*/
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #E8C7C8;
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/*Hamburger kép szerkesztése*/
+
+#hamburger {
+        display: none;
+
+    }
+
+
+@media only screen and (max-width: 992px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    a {
+        border: none;
+        background-color: #E8C7C8;
+    }
+
+    a:hover {
+        background-color: #D9A3A4;
+        display: block;
+    }
+
+   #hamburger {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .felsosav {
+        display: none;
+        height: 250px;
+    }
+    
+    .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            margin-right: 80px;
+        }
+        #logo {
+            height: 60px;
+        }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="felsosav">
+        <div id="logo"><img src="./img/Dalma logó szerk..png" alt="logo" height="60px"></div>
+        <div id="menu">
+            <div><a href="index.html">Kezdőlap</a></div>
+            <div><a href="szolgaltatasok.html">Szolgáltatások / Árak</a></div>
+            <div><a href="galeria.html">Galéria</a></div>
+            <div><a href="#foglalas" class="hivatkozas">Kérj időpontot!</a></div>
+            <div><a href="#kapcsolat" class="hivatkozas">Kapcsolat</a></div>
+        </div>
+    </div>
+    </div> 
+    
+    <div id="hamburger" >
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <img src="./img/Hamburger_icon.svg.png" alt="hamburgermenu" id="ikon" width="30px">
+      <i class="vonalak"></i>
+      </a>
+    </div> 
+
+    <h2>Munkáim</h2>
+    <div class="container" >
+        <div class="sajatfotok" ><img src="./img/sajat1.JPG" alt="köröm1" width="250px"></div>
+        <div class="sajatfotok" ><img src="./img/sajat2.JPG" alt="köröm2" width="250px"></div>
+        <div class="sajatfotok" ><img src="./img/sajat3.jpg" alt="köröm3" width="250px"></div>
+        <div class="sajatfotok" ><img src="./img/sajat4.jpg" alt="köröm4" width="250px"></div>
+        <div class="sajatfotok" ><img src="./img/sajat5.jpg" alt="köröm5" width="250px"></div>
+    </div>
+
+    <div id="zuruck">
+        <a href="index.html">Vissza a kezdőoldalra</a>
+    </div>
+    
+    
+    
+    
+    <script>
+        function myFunction() {
+          let x = document.getElementsByClassName("felsosav");
+          if (x[0].style.display === "flex") {
+            x[0].style.display = "none";
+          } else {
+            x[0].style.display = "flex";
+          }
+        }
+    </script>
+
+   
+   <footer>
+        <h2>Kapcsolat</h2>
+        <p id="kapcsolat">
+          Üzlet neve: NailArtByDalma <br>
+          Cím: Ausztria, Bsuch <br>
+          Telefonszám: +36 ** *** ****
+        </p>
+      </footer>
+    
+</body>
+</html>
